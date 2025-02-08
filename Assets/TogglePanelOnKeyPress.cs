@@ -18,9 +18,11 @@ public class TogglePanelAndSliderOnButtonClick : MonoBehaviour
 
     private bool isGamePaused = false;  // Variable pour savoir si le jeu est en pause ou non
     private bool isKeyboardModeActive = false; // Variable pour l'état du mode clavier
-
+    public Image keyboard;
+    private bool monSuperClavier;
     void Start()
     {
+        keyboard.enabled = false;
         // Reliez les boutons aux méthodes appropriées
         toggleButton.onClick.AddListener(TogglePanelAndSlider);
         keyboardModeButton.onClick.AddListener(ToggleKeyboardMode);
@@ -34,9 +36,12 @@ public class TogglePanelAndSliderOnButtonClick : MonoBehaviour
         // Désactiver initialement tous les éléments
         DeactivateAllUI();
     }
-
     void Update()
     {
+        if ((monSuperClavier == true))
+        {
+            keyboard.enabled = false;
+        }
         // Vérifie si la touche Échap est pressée
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -94,10 +99,14 @@ public class TogglePanelAndSliderOnButtonClick : MonoBehaviour
             {
                 buttonText.text = isKeyboardModeActive ? "Mode Clavier : Activé" : "Mode Clavier : Désactivé";
             }
+            Debug.Log("Mode clavier activé : " + isKeyboardModeActive);
         }
 
-        Debug.Log("Mode clavier activé : " + isKeyboardModeActive);
+        // Ajout de la gestion du clavier
+        keyboard.enabled = isKeyboardModeActive;
     }
+
+
 
     // Méthode pour activer/désactiver le dossier
     void ToggleFolderState()
