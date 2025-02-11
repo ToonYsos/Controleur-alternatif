@@ -933,16 +933,16 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 992243455}
   changeDelay: 15
-  blackKey: 282
-  blueKey: 288
-  greenKey: 289
-  greyKey: 286
-  orangeKey: 284
-  blue2Key: 290
-  purpleKey: 287
-  redKey: 285
-  yellowKey: 283
-  whiteKey: 291
+  blackKey: 257
+  blueKey: 263
+  greenKey: 264
+  greyKey: 261
+  orangeKey: 259
+  blue2Key: 265
+  purpleKey: 262
+  redKey: 260
+  yellowKey: 258
+  whiteKey: 256
   black: {r: 0, g: 0, b: 0, a: 0}
   blue: {r: 0.05208253, g: 0.17824711, b: 0.5018867, a: 0}
   green: {r: 0.056767512, g: 0.4490565, b: 0.06319847, a: 0}
